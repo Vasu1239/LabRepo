@@ -22,9 +22,17 @@ func add(_ a: Int?, _ b: Int?) -> Int? {
     return a + b
 }
 
-print(add(10, 20)!)
-print(add(10, nil))
-print(add(nil, nil))
+if let result1 = add(3, 7) {
+    print("Sum: \(result1)")
+} else {
+    print("Sum is nil")
+}
+
+if let result2 = add(nil, 4) {
+    print("Sum: \(result2)")
+} else {
+    print("Sum is nil")
+}
 /*:
  When working with UIKit objects, you will occasionally need to unwrap optionals to handle user input. For example, the text fields initialized below have `text` properties that are of type `String?`.
 
@@ -55,12 +63,11 @@ func createUser() -> User? {
 }
 
 //:  Call the function you made above and capture the return value. Unwrap the `User` with standard optional binding and print a statement using each of its properties.
-guard let newUser = createUser() else {
-    return 
+if let user = createUser() {
+    print("User created: \(user.firstName) \(user.lastName), age \(user.age)")
+} else {
+    print("Failed to create user")
 }
-print("First Name: \(newUser.firstName)")
-print("Last Name: \(newUser.lastName)")
-print("Age: \(newUser.age)")
 
 /*:
 page 1 of 2  |  [Next: App Exercise - Guard](@next)

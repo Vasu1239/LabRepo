@@ -38,7 +38,7 @@ let foodTextField = UITextField()
 let caloriesTextField = UITextField()
 
 foodTextField.text = "Banana"
-caloriesTextField.text = "23"
+caloriesTextField.text = "twenty"
 
 
 func logFood() -> Food?{
@@ -50,13 +50,15 @@ func logFood() -> Food?{
     }
 
 //:  Call the function you made above and capture the return value. Unwrap the `Food` object with standard optional binding and print a statement about the food using each of its properties. Go back and change the text in `caloriesTextField` to a string that cannot be converted into a number. What happens in that case?
-print(logFood()!)
-
-guard let food = logFood() else{
+if let food = logFood() {
+    print("You logged a food item: \(food.name) with \(food.calories) calories.")
+} else {
     print("Invalid input: Please enter a valid food name and a numeric calorie value.")
-    return
 }
-print("You logged a food item: \(food.name) with \(food.calories) calories.")
+
+//We get input as nil,Because Int("twenty") fails, the guard statement fails, and logFood() returns nil.
+
+
 
 /*:
  _Copyright © 2023 Apple Inc._

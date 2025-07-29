@@ -28,7 +28,7 @@ func progressUpdate() {
     } else if steps < goal * 5/10 {
         print("You're almost halfway there!")
     } else if steps < goal * 9/10 {
-        print("You're over halfway there!")
+        print( "You're over halfway there!")
     } else {
         print("You beat your goal!")
     }

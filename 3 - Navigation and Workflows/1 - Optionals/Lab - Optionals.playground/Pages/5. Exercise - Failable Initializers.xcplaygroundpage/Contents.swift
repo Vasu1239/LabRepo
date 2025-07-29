@@ -28,13 +28,13 @@ let Computer1 = Computer(ram: 16, yearManufactured: 2015)
 let Computer2 = Computer(ram: 0, yearManufactured: 2024)
 
 if let computer = Computer1 {
-    print("Computer - RAM: \(computer.ram)GB, Year: \(computer.yearManufactured)")
+    print("Computer - RAM: \(computer.ram!)GB, Year: \(computer.yearManufactured)")
 } else {
     print("computer1 instance is nil.")
 }
 
 if let computer = Computer2 {
-    print("Optional Computer - RAM: \(computer.ram)GB, Year: \(computer.yearManufactured)")
+    print("Optional Computer - RAM: \(computer.ram!)GB, Year: \(computer.yearManufactured)")
 } else {
     print("Optional computer instance is nil.")
 }

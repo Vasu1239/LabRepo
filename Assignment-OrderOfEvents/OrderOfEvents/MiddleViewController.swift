@@ -2,7 +2,7 @@
 //  MiddleViewController.swift
 //  OrderOfEvents
 //
-//  Created by Vasu on 25/07/25.
+//  Created by Vasu_SKH on 25/07/25.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import UIKit
 class MiddleViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    var eventNumber: Int = 0
+    var eventNumber: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()

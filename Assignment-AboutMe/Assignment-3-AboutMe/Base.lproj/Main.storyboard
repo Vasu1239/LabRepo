@@ -17,24 +17,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xuH-g7-kY0">
-                                <rect key="frame" x="16" y="430" width="368" height="223"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 2" translatesAutoresizingMaskIntoConstraints="NO" id="pyl-Md-fZm">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xuH-g7-kY0">
+                                <rect key="frame" x="12" y="341" width="369" height="275"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <mutableString key="text">I’m a Third-year BE-CSE student in Computer Science at Chitkara University, driven by a curiosity to explore how technology
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="275" id="Yh3-PR-VYA"/>
+                                </constraints>
+                                <string key="text">I’m a Third-year BE-CSE student in Computer Science at Chitkara University, driven by a curiosity to explore how technology
 can solve everyday challenges. I thrive in collaborative settings, bringing creativity and a problem-solving mindset to every
 team project. My hands-on approach to learning—through experimentation and teamwork—has helped me master diverse
 skills. I’m inspired by the idea of creating solutions that make a meaningful difference. I find joy in tackling complex problems
-and turning ideas into functional, impactful systems.</mutableString>
+and turning ideas into functional, impactful systems.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1s-WF-AbR">
-                                <rect key="frame" x="267" y="33" width="126" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xo0-7H-bi3">
+                                <rect key="frame" x="45" y="572" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPt-pk-0Wy">
+                                <rect key="frame" x="185" y="691" width="183" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="183" id="a0n-qQ-GXb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Send Message"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfB-ne-fkL">
+                                <rect key="frame" x="51" y="691" width="73" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Follow"/>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-qo-FP6">
+                                <rect key="frame" x="16" y="134" width="90" height="89.666666666666657"/>
+                                <color key="tintColor" systemColor="viewFlipsideBackgroundColor"/>
+                                <rect key="contentStretch" x="0.14999999999999999" y="0.0" width="0.45000000000000001" height="1"/>
+                                <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large" renderingMode="original"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60" scale="large"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-bH-ZGu">
+                                <rect key="frame" x="25.999999999999996" y="263" width="50.666666666666657" height="29"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Vasu">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d1s-WF-AbR">
+                                <rect key="frame" x="242" y="118" width="126" height="44"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="0.34999999999999998" y="0.0" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126" id="sFO-SC-rJw"/>
+                                </constraints>
                                 <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,55 +96,31 @@ and turning ideas into functional, impactful systems.</mutableString>
                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </navigationBarAppearance>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xo0-7H-bi3">
-                                <rect key="frame" x="45" y="572" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkX-bH-ZGu">
-                                <rect key="frame" x="100" y="371" width="123" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Vasu">
-                                        <attributes>
-                                            <color key="NSColor" systemColor="labelColor"/>
-                                            <font key="NSFont" metaFont="system" size="24"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPt-pk-0Wy">
-                                <rect key="frame" x="185" y="691" width="183" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Send Message"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Q3B-8j-OOA">
-                                <rect key="frame" x="2" y="105" width="389" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfB-ne-fkL">
-                                <rect key="frame" x="51" y="691" width="73" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Follow"/>
-                            </button>
-                            <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" highlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bzl-qo-FP6">
-                                <rect key="frame" x="2" y="347" width="90" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="viewFlipsideBackgroundColor"/>
-                                <rect key="contentStretch" x="0.14999999999999999" y="0.0" width="0.45000000000000001" height="1"/>
-                                <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large" renderingMode="original"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60" scale="large"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ddy-PN-y2w"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xuH-g7-kY0" firstAttribute="top" secondItem="oUm-iI-pdI" secondAttribute="top" constant="341" id="160-DU-QGz"/>
+                            <constraint firstItem="xuH-g7-kY0" firstAttribute="top" secondItem="FkX-bH-ZGu" secondAttribute="bottom" constant="49" id="62p-lg-5LH"/>
+                            <constraint firstItem="pyl-Md-fZm" firstAttribute="leading" secondItem="oUm-iI-pdI" secondAttribute="leading" id="7qj-Sg-9Z3"/>
+                            <constraint firstItem="FkX-bH-ZGu" firstAttribute="leading" secondItem="Ddy-PN-y2w" secondAttribute="leading" constant="26" id="BJR-J9-z4H"/>
+                            <constraint firstItem="xuH-g7-kY0" firstAttribute="centerX" secondItem="oUm-iI-pdI" secondAttribute="centerX" id="Grn-Ry-WLm"/>
+                            <constraint firstItem="Ddy-PN-y2w" firstAttribute="trailing" secondItem="DPt-pk-0Wy" secondAttribute="trailing" constant="25" id="HtN-fw-i2b"/>
+                            <constraint firstItem="xuH-g7-kY0" firstAttribute="top" secondItem="FkX-bH-ZGu" secondAttribute="bottom" constant="49" id="Jsn-ft-Z4u"/>
+                            <constraint firstItem="DPt-pk-0Wy" firstAttribute="leading" secondItem="cfB-ne-fkL" secondAttribute="trailing" constant="61" id="LuI-zZ-tjS"/>
+                            <constraint firstItem="bzl-qo-FP6" firstAttribute="leading" secondItem="Ddy-PN-y2w" secondAttribute="leading" constant="16" id="Pjn-7Q-Ad3"/>
+                            <constraint firstItem="xuH-g7-kY0" firstAttribute="leading" secondItem="Ddy-PN-y2w" secondAttribute="leading" constant="12" id="Pqv-TL-yG8"/>
+                            <constraint firstItem="d1s-WF-AbR" firstAttribute="top" secondItem="Ddy-PN-y2w" secondAttribute="top" id="Xt4-rm-g4o"/>
+                            <constraint firstAttribute="bottom" secondItem="pyl-Md-fZm" secondAttribute="bottom" id="Ycq-DN-hDk"/>
+                            <constraint firstItem="pyl-Md-fZm" firstAttribute="trailing" secondItem="d1s-WF-AbR" secondAttribute="trailing" id="c41-Nu-Kca"/>
+                            <constraint firstItem="FkX-bH-ZGu" firstAttribute="top" secondItem="bzl-qo-FP6" secondAttribute="bottom" constant="48.670000000000002" id="cMd-Qh-N9A"/>
+                            <constraint firstItem="DPt-pk-0Wy" firstAttribute="top" secondItem="xuH-g7-kY0" secondAttribute="bottom" constant="75" id="dap-IH-gyN"/>
+                            <constraint firstItem="Ddy-PN-y2w" firstAttribute="trailing" secondItem="xuH-g7-kY0" secondAttribute="trailing" constant="12" id="dax-W6-WCj"/>
+                            <constraint firstItem="bzl-qo-FP6" firstAttribute="top" secondItem="Ddy-PN-y2w" secondAttribute="top" constant="25" id="exI-lI-vRs"/>
+                            <constraint firstItem="pyl-Md-fZm" firstAttribute="top" secondItem="oUm-iI-pdI" secondAttribute="top" id="kov-dV-aaC"/>
+                            <constraint firstItem="xuH-g7-kY0" firstAttribute="centerX" secondItem="pyl-Md-fZm" secondAttribute="centerX" id="ucA-ux-N1H"/>
+                            <constraint firstItem="DPt-pk-0Wy" firstAttribute="baseline" secondItem="cfB-ne-fkL" secondAttribute="baseline" id="van-eS-Ncd"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bio" id="oNr-Xc-t84">
                         <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large"/>
@@ -138,6 +161,9 @@ and turning ideas into functional, impactful systems.</mutableString>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="Vp4-PG-oQf">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="118" translatesAutoresizingMaskIntoConstraints="NO" id="xo5-Zd-nZb">
                                 <rect key="frame" x="16" y="118" width="361" height="617"/>
                                 <subviews>
@@ -149,7 +175,6 @@ and turning ideas into functional, impactful systems.</mutableString>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WSh-D6-RKZ">
                                         <rect key="frame" x="0.0" y="166" width="361" height="451"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                                         <string key="text">My family is very special to me. We are a small and close-knit family consisting of my father, mother, and me. My father is hardworking and always supports us. My mother is caring and takes good care of our home. We love spending time together, whether it's during meals, watching movies, or going out on weekends. </string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -168,15 +193,20 @@ and turning ideas into functional, impactful systems.</mutableString>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bw5-gB-Rmk"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
+                            <constraint firstItem="Vp4-PG-oQf" firstAttribute="top" secondItem="1W3-mO-p3z" secondAttribute="top" id="5wx-2J-qNC"/>
                             <constraint firstItem="bw5-gB-Rmk" firstAttribute="bottom" secondItem="xo5-Zd-nZb" secondAttribute="bottom" id="BMS-J5-iyE"/>
+                            <constraint firstItem="Vp4-PG-oQf" firstAttribute="centerX" secondItem="xo5-Zd-nZb" secondAttribute="centerX" id="Fuy-ou-VGa"/>
                             <constraint firstItem="xo5-Zd-nZb" firstAttribute="centerX" secondItem="1W3-mO-p3z" secondAttribute="centerX" id="IPK-HZ-2js"/>
+                            <constraint firstItem="Vp4-PG-oQf" firstAttribute="trailing" secondItem="bw5-gB-Rmk" secondAttribute="trailing" id="KUZ-cv-dXz"/>
                             <constraint firstItem="bw5-gB-Rmk" firstAttribute="trailing" secondItem="xo5-Zd-nZb" secondAttribute="trailing" constant="16" id="O2K-jw-LSF"/>
                             <constraint firstItem="xo5-Zd-nZb" firstAttribute="top" secondItem="bw5-gB-Rmk" secondAttribute="top" id="Sq5-QW-0nI"/>
                             <constraint firstItem="xo5-Zd-nZb" firstAttribute="top" secondItem="bw5-gB-Rmk" secondAttribute="top" id="StK-5m-Z3k"/>
                             <constraint firstItem="xo5-Zd-nZb" firstAttribute="top" secondItem="bw5-gB-Rmk" secondAttribute="top" id="fRN-f1-Rre"/>
+                            <constraint firstAttribute="bottom" secondItem="Vp4-PG-oQf" secondAttribute="bottom" id="lGL-CE-Y9T"/>
+                            <constraint firstItem="Vp4-PG-oQf" firstAttribute="leading" secondItem="bw5-gB-Rmk" secondAttribute="leading" id="oVM-Kn-dPo"/>
                             <constraint firstItem="xo5-Zd-nZb" firstAttribute="leading" secondItem="bw5-gB-Rmk" secondAttribute="leading" constant="16" id="pzh-up-iZ9"/>
+                            <constraint firstItem="Vp4-PG-oQf" firstAttribute="leading" secondItem="bw5-gB-Rmk" secondAttribute="leading" id="sAb-Zj-O31"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Family" id="yjN-Ci-Q5r">
@@ -197,6 +227,10 @@ and turning ideas into functional, impactful systems.</mutableString>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image 1" translatesAutoresizingMaskIntoConstraints="NO" id="GXM-BX-eH1">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="84" translatesAutoresizingMaskIntoConstraints="NO" id="e99-ap-UPU">
                                 <rect key="frame" x="0.0" y="118" width="393" height="734"/>
                                 <subviews>
@@ -208,8 +242,7 @@ and turning ideas into functional, impactful systems.</mutableString>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gQa-Sp-TGg">
                                         <rect key="frame" x="16" y="132" width="361" height="602"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                        <mutableString key="text">Hobbies play an important role in my life because they keep me happy, relaxed, and creative. I have several hobbies that I truly enjoy. One of my favorite hobbies is drawing, as it allows me to express my imagination through colors and shapes. I also enjoy listening to music, which helps me feel calm and refreshed after a busy day. In my free time, I like reading books, especially short stories and adventure novels. Sometimes, I also spend time playing outdoor games, which keeps me active and healthy. My hobbies not only make my free time enjoyable but also help me learn new skills and stay positive.</mutableString>
+                                        <string key="text">Hobbies play an important role in my life because they keep me happy, relaxed, and creative. I have several hobbies that I truly enjoy. One of my favorite hobbies is drawing, as it allows me to express my imagination through colors and shapes. I also enjoy listening to music, which helps me feel calm and refreshed after a busy day. In my free time, I like reading books, especially short stories and adventure novels. Sometimes, I also spend time playing outdoor games, which keeps me active and healthy. My hobbies not only make my free time enjoyable but also help me learn new skills and stay positive.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -228,12 +261,15 @@ and turning ideas into functional, impactful systems.</mutableString>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bnT-uk-b0m"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="e99-ap-UPU" firstAttribute="centerX" secondItem="5LD-4z-YUN" secondAttribute="centerX" id="3kX-xa-T56"/>
+                            <constraint firstItem="GXM-BX-eH1" firstAttribute="leading" secondItem="bnT-uk-b0m" secondAttribute="leading" id="IG8-b7-RZp"/>
                             <constraint firstAttribute="bottom" secondItem="e99-ap-UPU" secondAttribute="bottom" id="IK4-lh-SrA"/>
+                            <constraint firstItem="GXM-BX-eH1" firstAttribute="trailing" secondItem="bnT-uk-b0m" secondAttribute="trailing" id="IYA-F0-nto"/>
                             <constraint firstItem="bnT-uk-b0m" firstAttribute="trailing" secondItem="e99-ap-UPU" secondAttribute="trailing" id="PaU-OV-Mj5"/>
                             <constraint firstItem="e99-ap-UPU" firstAttribute="top" secondItem="bnT-uk-b0m" secondAttribute="top" id="QzR-J0-8gN"/>
+                            <constraint firstItem="GXM-BX-eH1" firstAttribute="top" secondItem="5LD-4z-YUN" secondAttribute="top" id="htc-4z-ySb"/>
+                            <constraint firstAttribute="bottom" secondItem="GXM-BX-eH1" secondAttribute="bottom" id="jhS-hI-FN0"/>
                             <constraint firstItem="e99-ap-UPU" firstAttribute="leading" secondItem="bnT-uk-b0m" secondAttribute="leading" id="mR9-Jx-pSP"/>
                         </constraints>
                     </view>
@@ -249,7 +285,8 @@ and turning ideas into functional, impactful systems.</mutableString>
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="1200" height="629"/>
+        <image name="Image 1" width="900" height="1600"/>
+        <image name="Image 2" width="900" height="1600"/>
         <image name="checkmark.bubble" catalog="system" width="128" height="110"/>
         <image name="checkmark.bubble.fill" catalog="system" width="128" height="110"/>
         <image name="checkmark.bubble.fill.rtl" catalog="system" width="128" height="110"/>
@@ -264,12 +301,6 @@ and turning ideas into functional, impactful systems.</mutableString>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

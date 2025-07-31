@@ -69,7 +69,17 @@ class QuestionViewController: UIViewController {
 
         updateUI()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ResultsSegue" {
+            let resultsViewController = segue.destination as! ResultsViewController
+            resultsViewController.responses = answersChosen
+        }
+    }
+    @IBSegueAction func showResults(_ coder: NSCoder) -> ResultsViewController? {
+        return ResultsViewController(coder: coder, responses: answersChosen)
+    }
+    
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         let currentAnswers = questions[questionIndex].answers
         
@@ -184,11 +194,6 @@ class QuestionViewController: UIViewController {
         rangedLabel2.text = answers.last?.text
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ResultsSegue" {
-            let resultsViewController = segue.destination as! ResultsViewController
-            resultsViewController.responses = answersChosen
-        }
-    }
+    
 
 }

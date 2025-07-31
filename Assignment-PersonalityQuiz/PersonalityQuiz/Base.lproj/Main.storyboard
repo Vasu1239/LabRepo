@@ -271,7 +271,7 @@
                         <outlet property="singleButton3" destination="9Mb-YU-je5" id="Nmn-8v-qwm"/>
                         <outlet property="singleButton4" destination="JzD-Mo-JPE" id="REc-d9-Ee5"/>
                         <outlet property="singleStackView" destination="omw-5B-NfS" id="e7Q-pC-vv7"/>
-                        <segue destination="IxL-D9-NBn" kind="show" identifier="ResultsSegue" id="DDs-Pb-pLM"/>
+                        <segue destination="IxL-D9-NBn" kind="show" identifier="ResultsSegue" destinationCreationSelector="showResults:" id="DDs-Pb-pLM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xr4-VW-7KL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -281,7 +281,7 @@
         <!--Results-->
         <scene sceneID="Jzu-iQ-0We">
             <objects>
-                <viewController id="IxL-D9-NBn" customClass="ResultsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IxL-D9-NBn" customClass="ResultsViewController" customModule="PersonalityQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dzD-Ee-UQh">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="802"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

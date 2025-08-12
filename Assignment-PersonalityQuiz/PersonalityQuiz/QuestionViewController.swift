@@ -38,7 +38,7 @@ class QuestionViewController: UIViewController {
         Question(text: "Which food do you like the most?",
                  type:.single,
                  answers: [
-                    Answer(text: "Steak", type: .dog),
+                    Answer(text: "Steak", type: .lion),
                     Answer(text: "Fish", type: .cat),
                     Answer(text: "Carrots", type: .rabbit),
                     Answer(text: "Corn", type: .turtle)
@@ -49,7 +49,7 @@ class QuestionViewController: UIViewController {
                     Answer(text: "Swimming", type: .turtle),
                     Answer(text: "Sleeping", type: .cat),
                     Answer(text: "Cuddling", type: .rabbit),
-                    Answer(text: "Eating", type: .dog)
+                    Answer(text: "Eating", type: .lion)
             ]),
         Question(text: "How much do you enjoy car rides?",
                  type: .ranged,
@@ -57,7 +57,7 @@ class QuestionViewController: UIViewController {
                     Answer(text: "I dislike them", type: .cat),
                     Answer(text: "I get a little nervous", type: .rabbit),
                     Answer(text: "I barely notice them", type: .turtle),
-                    Answer(text: "I love them", type: .dog)
+                    Answer(text: "I love them", type: .lion)
             ])
     ]
     
@@ -134,7 +134,7 @@ class QuestionViewController: UIViewController {
         questionIndex += 1
         
         if questionIndex < questions.count {
-            updateUI()
+           updateUI()
         } else {
             performSegue(withIdentifier: "ResultsSegue", sender: nil)
         }
@@ -190,8 +190,8 @@ class QuestionViewController: UIViewController {
         rangedStackView.isHidden = false
         
         rangedSlider.setValue(0.5, animated: false)
-        rangedLabel1.text = answers.first?.text
-        rangedLabel2.text = answers.last?.text
+        rangedLabel1.text = answers[questionIndex].text
+        rangedLabel2.text = answers[questionIndex].text
     }
     
     

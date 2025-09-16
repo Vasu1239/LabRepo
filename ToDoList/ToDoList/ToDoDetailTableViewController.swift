@@ -31,7 +31,7 @@ class ToDoDetailTableViewController: UITableViewController {
         super.viewDidLoad()
         let currentDueDate : Date
         if let toDo = toDo {
-            navigationItem.title = "Edit ToDo"
+            navigationItem.title = "Edit To-Do"
             titleTextField.text = toDo.title
             isCompleteButton.isSelected = toDo.isComplete
             currentDueDate = toDo.dueDate

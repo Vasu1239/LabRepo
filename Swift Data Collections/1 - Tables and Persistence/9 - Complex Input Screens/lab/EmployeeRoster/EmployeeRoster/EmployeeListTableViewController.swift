@@ -18,15 +18,12 @@ class EmployeeListTableViewController: UITableViewController, EmployeeDetailTabl
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath)
-        
-        let employee = employees[indexPath.row]
-        
-        var content = cell.defaultContentConfiguration()
-        content.text = employee.name
-        content.secondaryText = employee.employeeType.description
-        cell.contentConfiguration = content
-        
-        return cell
+                
+                let employee = employees[indexPath.row]
+                cell.textLabel?.text = employee.name
+                cell.detailTextLabel?.text = employee.employeeType.description
+                
+                return cell
     }
     
     // Override to support editing the table view.
@@ -42,19 +39,19 @@ class EmployeeListTableViewController: UITableViewController, EmployeeDetailTabl
     @IBSegueAction func showEmployeeDetail(_ coder: NSCoder, sender: Any?) -> EmployeeDetailTableViewController? {
         
         let detailViewController = EmployeeDetailTableViewController(coder: coder)
-        detailViewController?.delegate = self
-        
-        guard
-            let cell = sender as? UITableViewCell,
-            let indexPath = tableView.indexPath(for: cell)
-        else {
-            return detailViewController
-        }
-        
-        let employee = employees[indexPath.row]
-        detailViewController?.employee = employee
-        
-        return detailViewController
+                detailViewController?.delegate = self
+                
+                guard
+                    let cell = sender as? UITableViewCell,
+                    let indexPath = tableView.indexPath(for: cell)
+                else {
+                    return detailViewController
+                }
+                
+                let employee = employees[indexPath.row]
+                detailViewController?.employee = employee
+                
+                return detailViewController
     }
     
     @IBAction func unwindToEmployeeList(segue: UIStoryboardSegue) {
@@ -64,16 +61,16 @@ class EmployeeListTableViewController: UITableViewController, EmployeeDetailTabl
     // MARK: - EmployeeDetailTableViewControllerDelegate
     
     func employeeDetailTableViewController(_ controller: EmployeeDetailTableViewController, didSave employee: Employee) {
-        
-        if let indexPath = tableView.indexPathForSelectedRow {
-            employees.remove(at: indexPath.row)
-            employees.insert(employee, at: indexPath.row)
-        } else {
-            employees.append(employee)
+            
+            if let indexPath = tableView.indexPathForSelectedRow {
+                employees.remove(at: indexPath.row)
+                employees.insert(employee, at: indexPath.row)
+            } else {
+                employees.append(employee)
+            }
+            
+            tableView.reloadData()
+            dismiss(animated: true, completion: nil)
         }
-        
-        tableView.reloadData()
-        dismiss(animated: true, completion: nil)
-    }
 }
 

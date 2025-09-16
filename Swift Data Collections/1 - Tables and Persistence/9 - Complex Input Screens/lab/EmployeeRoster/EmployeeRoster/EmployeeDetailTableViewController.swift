@@ -6,6 +6,8 @@ protocol EmployeeDetailTableViewControllerDelegate: AnyObject {
 }
 
 class EmployeeDetailTableViewController: UITableViewController, UITextFieldDelegate {
+    
+    
 
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var dobLabel: UILabel!
@@ -37,7 +39,7 @@ class EmployeeDetailTableViewController: UITableViewController, UITextFieldDeleg
     }
     
     private func updateSaveButtonState() {
-        let shouldEnableSaveButton = nameTextField.text?.isEmpty == false
+        let shouldEnableSaveButton = nameTextField.text?.isEmpty == false && dobLabel.text?.isEmpty == false && employeeTypeLabel.text?.isEmpty == false
         saveBarButtonItem.isEnabled = shouldEnableSaveButton
     }
     

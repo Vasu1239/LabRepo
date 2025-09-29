@@ -145,6 +145,12 @@
                                                         <action selector="datePickerAction:" destination="sKr-bE-vCi" eventType="valueChanged" id="66U-M4-tWT"/>
                                                     </connections>
                                                 </datePicker>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9p-Cv-RFJ">
+                                                    <rect key="frame" x="136" y="254" width="75" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="HlQ-mc-W3V" firstAttribute="leading" secondItem="coP-TW-1Y8" secondAttribute="leading" constant="8" id="QIl-4r-gwd"/>

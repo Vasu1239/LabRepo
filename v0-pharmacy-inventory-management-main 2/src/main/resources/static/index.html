@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy Inventory Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Login/Register Section -->
+        <div id="auth-section" class="auth-container">
+            <div class="auth-card">
+                <h2 id="auth-title">Login to Pharmacy System</h2>
+                <form id="auth-form" novalidate>
+                    <div id="name-field" class="form-group" style="display: none;">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div id="usertype-field" class="form-group" style="display: none;">
+                        <label for="userType">User Type</label>
+                        <select id="userType" name="userType">
+                            <option value="CUSTOMER">Customer</option>
+                            <option value="ADMIN">Admin</option>
+                            <option value="VENDOR">Vendor</option>
+                        </select>
+                    </div>
+                    <button type="submit" id="auth-submit" class="btn-primary">Login</button>
+                </form>
+                <p class="auth-switch">
+                    <span id="auth-switch-text">Don't have an account?</span>
+                    <a href="#" id="auth-switch-link">Register here</a>
+                </p>
+                
+                <!-- Demo Accounts -->
+                <div class="demo-accounts">
+                    <h3>Demo Accounts</h3>
+                    <div class="demo-buttons">
+                        <button class="demo-btn" data-email="customer@demo.com" data-password="demo123" data-type="customer">
+                            <i class="fas fa-user"></i> Customer Demo
+                        </button>
+                        <button class="demo-btn" data-email="admin@demo.com" data-password="demo123" data-type="admin">
+                            <i class="fas fa-user-shield"></i> Admin Demo
+                        </button>
+                        <button class="demo-btn" data-email="vendor@demo.com" data-password="demo123" data-type="vendor">
+                            <i class="fas fa-truck"></i> Vendor Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Application -->
+        <div id="main-app" style="display: none;">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <h1><i class="fas fa-pills"></i> Pharmacy Management</h1>
+                    <div class="header-actions">
+                        <span id="user-info" class="user-info"></span>
+                        <button id="logout-btn" class="btn-secondary">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Navigation -->
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-tab="medicines">
+                    <i class="fas fa-pills"></i> Medicines
+                </button>
+                <button class="nav-tab" data-tab="orders" id="orders-tab">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </button>
+                <button class="nav-tab" data-tab="vendors" id="vendors-tab" style="display: none;">
+                    <i class="fas fa-truck"></i> Vendors
+                </button>
+                <button class="nav-tab" data-tab="categories" id="categories-tab" style="display: none;">
+                    <i class="fas fa-tags"></i> Categories
+                </button>
+                <button class="nav-tab" data-tab="cart" id="cart-tab" style="display: none;">
+                    <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+                </button>
+            </nav>
+
+            <!-- Content Sections -->
+            <main class="main-content">
+                <!-- Medicines Section -->
+                <section id="medicines-section" class="content-section active">
+                    <div class="section-header">
+                        <h2>Medicines Inventory</h2>
+                        <div class="section-actions">
+                            <input type="text" id="medicine-search" placeholder="Search medicines..." class="search-input">
+                            <select id="category-filter" class="filter-select">
+                                <option value="">All Categories</option>
+                            </select>
+                            <button id="add-medicine-btn" class="btn-primary" style="display: none;">
+                                <i class="fas fa-plus"></i> Add Medicine
+                            </button>
+                        </div>
+                    </div>
+                    <div id="medicines-grid" class="medicines-grid"></div>
+                </section>
+
+                <!-- Orders Section -->
+                <section id="orders-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Orders Management</h2>
+                    </div>
+                    <div id="orders-list" class="orders-list"></div>
+                </section>
+
+                <!-- Vendors Section -->
+                <section id="vendors-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Vendors Management</h2>
+                        <button id="add-vendor-btn" class="btn-primary">
+                            <i class="fas fa-plus"></i> Add Vendor
+                        </button>
+                    </div>
+                    <div id="vendors-list" class="vendors-list"></div>
+                </section>
+
+                <!-- Categories Section -->
+                <section id="categories-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Categories Management</h2>
+                        <button id="add-category-btn" class="btn-primary">
+                            <i class="fas fa-plus"></i> Add Category
+                        </button>
+                    </div>
+                    <div id="categories-list" class="categories-list"></div>
+                </section>
+
+                <!-- Cart Section -->
+                <section id="cart-section" class="content-section">
+                    <div class="section-header">
+                        <h2>Shopping Cart</h2>
+                        <button id="clear-cart-btn" class="btn-secondary">
+                            <i class="fas fa-trash"></i> Clear Cart
+                        </button>
+                    </div>
+                    <div id="cart-items" class="cart-items"></div>
+                    <div id="cart-summary" class="cart-summary">
+                        <div class="cart-total">
+                            <h3>Total: $<span id="cart-total">0.00</span></h3>
+                            <button id="checkout-btn" class="btn-primary btn-large">
+                                <i class="fas fa-credit-card"></i> Proceed to Checkout
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal-overlay" class="modal-overlay">
+        <div id="modal-content" class="modal-content"></div>
+    </div>
+
+    <script>
+        function previewOrder(orderId) {
+            const order = orders.find((o) => o.id === orderId);
+            if (!order) {
+                showAlert("Order not found.", "error");
+                return;
+            }
+
+            const itemsHtml = order.items.map(item => `
+                <tr>
+                    <td>${item.medicineName}</td>
+                    <td>${item.quantity}</td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>$${(item.quantity * item.price).toFixed(2)}</td>
+                </tr>
+            `).join("");
+
+            const content = `
+                <div class="order-preview">
+                    <h3>Order #${order.id}</h3>
+                    <div class="preview-details">
+                        <p><strong>Customer:</strong> ${order.customerName}</p>
+                        <p><strong>Date:</strong> ${new Date(order.orderDate).toLocaleString()}</p>
+                        <p><strong>Status:</strong> <span class="order-status status-${order.status.toLowerCase()}">${order.status}</span></p>
+                        <p><strong>Total Amount:</strong> $${order.totalAmount.toFixed(2)}</p>
+                    </div>
+                    <h4>Order Items:</h4>
+                    <table class="order-items-table">
+                        <thead>
+                            <tr>
+                                <th>Medicine</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${itemsHtml}
+                        </tbody>
+                    </table>
+                </div>
+            `;
+            showModal("Order Details", content);
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
